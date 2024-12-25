@@ -1,0 +1,56 @@
+<h2>Collapse to Tabs</h2>
+<div class="Rtable Rtable--3cols Rtable--collapse js-RtableTabs">
+  
+  <div class="Tablist" role="tablist"> 
+    <button class="Tab" role="tab" aria-selected="true">Ned</button>
+    <button class="Tab" role="tab" aria-selected="false">Jon</button>
+    <button class="Tab" role="tab" aria-selected="false">Arya</button>
+  </div>
+
+  <div style="order:0;" class="Rtable-cell Rtable-cell--head"><h3>Eddard Stark</h3></div>
+  <div style="order:1;" class="Rtable-cell">Has a sword named Ice</div>
+  <div style="order:2;" class="Rtable-cell">No direwolf</div>
+  <div style="order:3;" class="Rtable-cell Rtable-cell--foot"><strong>Lord of Winterfell</strong></div>
+
+  <div style="order:0;" class="Rtable-cell Rtable-cell--head"><h3>Jon Snow</h3></div>
+  <div style="order:1;" class="Rtable-cell">Has a sword named Longclaw</div>
+  <div style="order:2;" class="Rtable-cell">Direwolf: Ghost</div>
+  <div style="order:3;" class="Rtable-cell Rtable-cell--foot"><strong>Knows nothing</strong></div>
+
+  <div style="order:0;" class="Rtable-cell Rtable-cell--head"><h3>Arya Stark</h3></div>
+  <div style="order:1;" class="Rtable-cell">Has a sword named Needle</div>
+  <div style="order:2;" class="Rtable-cell">Direwolf: Nymeria</div>
+  <div style="order:3;" class="Rtable-cell Rtable-cell--foot"><strong>No one</strong></div>
+
+</div>
+
+
+<h2>Collapse to Accordions</h2>
+<div class="Rtable Rtable--4cols Rtable--collapse js-RtableAccordions">
+  
+  <button class="Accordion" role="tab" aria-selected="true">Ned</button>
+  <div class="Rtable-cell  Rtable-cell--head"><h3>Eddard Stark</h3></div>
+  <div class="Rtable-cell">Has a sword named Ice</div>
+  <div class="Rtable-cell">No direwolf</div>
+  <div class="Rtable-cell  Rtable-cell--foot"><strong>Lord of Winterfell</strong></div>
+  
+  <button class="Accordion" role="tab" aria-selected="false">Jon</button>
+  <div class="Rtable-cell  Rtable-cell--head"><h3>Jon Snow</h3></div>
+  <div class="Rtable-cell">Has a sword named Longclaw</div>
+  <div class="Rtable-cell">Direwolf: Ghost</div>
+  <div class="Rtable-cell  Rtable-cell--foot"><strong>Knows nothing</strong></div>
+  
+  <button class="Accordion" role="tab" aria-selected="false">Arya</button>
+  <div class="Rtable-cell  Rtable-cell--head"><h3>Arya Stark</h3></div>
+  <div class="Rtable-cell">Has a sword named Needle</div>
+  <div class="Rtable-cell">Direwolf: Nymeria</div>
+  <div class="Rtable-cell  Rtable-cell--foot"><strong>No one</strong></div>
+
+</div>
+
+
+<ul>
+  <li>Tab and accordion markup sits IN the table in a logical position</li>
+  <li>Toggle either row or column depending on table content</li>
+  <li>Use 'display:none' to toggle for both visual users and screen readers</li>
+</ul>

@@ -1,0 +1,94 @@
+@media all and (max-width: @breakpoint) { 
+  .hiddenSmall {display: none; }
+}
+
+
+/* Tab Styling
+==================================== */
+@tabColour: darkcyan;
+
+.Tablist {
+  display: flex;
+  flex-direction: row;
+  margin-left: -@bw;
+  @media all and (min-width: @breakpoint) { display: none; }
+}
+.Tab {
+  padding: 0.6em 1em;
+  margin: 0 @bw @bw 0;
+  text-align: center;
+  background-color: @tabColour;
+  border: solid @bw @tabColour;
+  border-bottom-width: 0;
+  border-radius: 0.5em 0.5em 0 0;
+  font-weight: bold;
+  color: darken(@tabColour,20%);
+  text-decoration: none;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  &:hover, &:focus {
+    background-color: mix(white,@tabColour,10%);
+    border-color: mix(white,@tabColour,10%);
+    outline: none;
+  }
+  &[aria-selected="false"]:active {
+    margin-top: 0.2em;
+    padding-bottom: 0.4em;
+  }
+  &[aria-selected="true"] {
+    background: mix(white,@tabColour,90%);
+    cursor: default;
+  }
+}
+
+
+/* Accordion Styling
+==================================== */
+@accordionColour: darkcyan;
+@iconSize: 2em;
+
+.Accordion {
+  position: relative; top: -@bw; left: -@bw; //compensate for border offset
+  width: 100%;
+  margin: 0 0 0.5em 0;
+  padding: 0.6em 0.6em 0.6em (@iconSize);
+  border-radius: 0.5em;
+  text-align: left;
+  border: solid @bw mix(black,@accordionColour,15%);
+  background-color: @accordionColour;
+  font-weight: bold;
+  color: darken(@accordionColour,20%);
+  text-decoration: none;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  @media all and (min-width: @breakpoint) { display: none; }
+  &:hover, &:focus {
+    outline: none;
+    filter: contrast(150%);
+  }
+  &[aria-selected="true"] {
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-width: 0;
+    background: mix(white,@accordionColour,70%);
+  }
+  &:before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 0.3em;
+    margin-top: -(@iconSize/1.75);
+    font-weight: normal;
+    font-size: @iconSize;
+    line-height: @iconSize;
+    background-size: @iconSize @iconSize;
+  }
+  &[aria-selected="true"]:before {
+    content: "-";
+  }
+}
+
+.js-RtableTabs, .js-RtableAccordions {
+  min-width: 240px;
+}

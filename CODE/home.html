@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="icon" href="/assets/zen6.png"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta name="theme-color" content="#000000"/>
+        <meta name="description" content="Web site created using create-react-app"/>
+        <link rel="apple-touch-icon" href="/logo192.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="manifest" href="/manifest.json"/>
+        <title>Holistic Coding</title>
+        <style>
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 5px;
+                z-index: 200;
+                font-size: 18px;
+                border: none;
+                outline: 0;
+                background-color: Transparent;
+                border: 1px solid #d3d3d3;
+                color: #fff;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 4px
+            }
+
+            #myBtn:hover {
+                background-color: #555
+            }
+
+            .fa-arrow-up {
+                color: #fff
+            }
+        </style>
+        <script defer="defer" src="/static/js/main.42dfec8e.js"></script>
+        <link href="/static/css/main.66664d1e.css" rel="stylesheet">
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+    </body>
+    <script type="text/javascript">
+        const mybutton = document.getElementById("myBtn");
+        function scrollFunction() {
+            document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 ? mybutton.style.display = "block" : mybutton.style.display = "none"
+        }
+        function topFunction() {
+            document.body.scrollTop = 0,
+            document.documentElement.scrollTop = 0
+        }
+        window.onscroll = function() {
+            scrollFunction()
+        }
+    </script>
+</html>
